@@ -7,10 +7,28 @@ export const PostsCollection: CollectionConfig = {
   admin: {
     useAsTitle: 'title',
   },
+  access: {
+    update: () => false,
+  },
   fields: [
     {
       name: 'title',
       type: 'text',
+    },
+    {
+      name: 'blocks',
+      type: 'blocks',
+      blocks: [
+        {
+          slug: 'block',
+          fields: [
+            {
+              name: 'block-text',
+              type: 'text',
+            },
+          ],
+        },
+      ],
     },
   ],
   versions: {
