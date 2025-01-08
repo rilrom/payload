@@ -12,6 +12,10 @@ export const PostsCollection: CollectionConfig = {
       name: 'title',
       type: 'text',
     },
+    {
+      name: 'richText',
+      type: 'richText',
+    },
   ],
   versions: {
     drafts: true,
