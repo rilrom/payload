@@ -14,6 +14,10 @@ const dirname = path.dirname(filename)
 export default buildConfigWithDefaults({
   // ...extend config here
   collections: [PostsCollection, MediaCollection],
+  localization: {
+    defaultLocale: 'en',
+    locales: ['en', 'es'],
+  },
   admin: {
     importMap: {
       baseDir: path.resolve(dirname),
