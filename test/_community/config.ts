@@ -1,4 +1,4 @@
-import { lexicalEditor } from '@payloadcms/richtext-lexical'
+import { EXPERIMENTAL_TableFeature, lexicalEditor } from '@payloadcms/richtext-lexical'
 import { fileURLToPath } from 'node:url'
 import path from 'path'
 
@@ -19,7 +19,9 @@ export default buildConfigWithDefaults({
       baseDir: path.resolve(dirname),
     },
   },
-  editor: lexicalEditor({}),
+  editor: lexicalEditor({
+    features: ({ defaultFeatures }) => [...defaultFeatures, EXPERIMENTAL_TableFeature()],
+  }),
   globals: [
     // ...add more globals here
     MenuGlobal,

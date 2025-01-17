@@ -12,6 +12,17 @@ export const PostsCollection: CollectionConfig = {
       name: 'title',
       type: 'text',
     },
+    {
+      name: 'richText',
+      type: 'richText',
+    },
+    {
+      name: 'sidebar',
+      type: 'text',
+      admin: {
+        position: 'sidebar',
+      },
+    },
   ],
   versions: {
     drafts: true,
